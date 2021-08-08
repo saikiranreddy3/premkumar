@@ -19,8 +19,17 @@ Ans: We can put any server or service based applications, On the docker containe
 ### MicroServices
 * Docker is best way of microservices.
 * we can move to any cloud easily.
+```
+Brekdown our application into smaller self executable services(not application) called as microservices(use http/tcp standed protocals).
+```
 
 ### Why u and my job in docker(y we learn docker)
 * ur and my responsibility is conrainarize applications.(should be containarized appliacation)
 * making what ever is  needed for running our application on docker  called as containarized.
 * Orachastration/clustring of containers.(our application will not be on container it will be many containes )all the container working closely together i.e orachaistration)
+
+```
+ci/cd
+Martin Fowler
+```
+
