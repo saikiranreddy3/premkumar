@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install open jdk on ubuntu 18.04
+      apt:
+        name: default-jdk
+        update_cache: yes
+        state: present 
+    - name: set the java environment 
+      template:
+        src: bashrc.j2
+        dest: /home/ubuntu/.bashrc.j2
+    - name: source the bashrc 
+      shell: . /home/ubuntu/.bashrc
+    - name: install tomcat9
+      get_url:
+        url: {{ url_download }}
+        dest: /tmp
+    - name: untar the tomcat 
+      unarchive:
+        src: /tmp/*.tar.gz
+        dest: /opt/tomcat
+    - name: copy the files
+                 
